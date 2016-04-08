@@ -53,7 +53,7 @@ platform :ios do
      sigh(adhoc: true)
      ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID] # use the UDID of the newly created provisioning profile
      gym(scheme: "testCI", use_legacy_build_api: true)
-     crashlytics(notifications:true, build_secret: "e686f1b3243a942e4360a1f3a2545b77a50ff7786373e001571f7feac97b6806",
+     crashlytics(notifications:true, debug:true, build_secret: "e686f1b3243a942e4360a1f3a2545b77a50ff7786373e001571f7feac97b6806",
      api_token: "01e006602884ae44cbdbe0395d0e0df5522b26e1")
   end
 
